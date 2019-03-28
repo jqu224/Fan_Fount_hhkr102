@@ -2,7 +2,8 @@ Here we are going to learn SQL
   &&    &&    &&    &&    &&    &&    &&    &&  
 have lots of fun with easy algorithm exercise.   
 
-two resources:
+### two resources:     
+
 w3schools - 52 questions    
 https://www.w3schools.com/sql/exercise.asp     
 
