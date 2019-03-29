@@ -1,6 +1,3 @@
-https://gist.github.com/fredbenenson/7bb92718e19138c20591     
-
-
 ---
 layout: default
 title: SQL Style Guide
@@ -9,6 +6,11 @@ tags:
   - data
   - process
 ---
+
+
+https://gist.github.com/fredbenenson/7bb92718e19138c20591     
+
+
 
 
 # Purpose
