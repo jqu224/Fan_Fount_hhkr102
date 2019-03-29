@@ -7,8 +7,9 @@ tags:
   - process
 ---
 
+# Take a look at the following scripts only after you finish the intro level queries.
 
-https://gist.github.com/fredbenenson/7bb92718e19138c20591     
+source:  https://gist.github.com/fredbenenson/7bb92718e19138c20591     
 
 
 
