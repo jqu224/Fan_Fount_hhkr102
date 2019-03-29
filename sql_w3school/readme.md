@@ -7,7 +7,7 @@ tags:
   - process
 ---
 
-# 🍇 Take a look at the following scripts only once you have finished the intro level queries.
+# 🍇 Take a look at the following scripts once you have finished the intro level queries.
 
 source:  https://gist.github.com/fredbenenson/7bb92718e19138c20591     
 
