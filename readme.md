@@ -41,6 +41,7 @@ python的list下一个的大小不确定，可能是一个巨大的dictionary，
               
               
 
+-----------------------------------------     
 你说这不巧嘛～ 
 正好，excel 里面的数据每一列的type都是统一的， pandas是用来操作整理excel数据的，              
 而 excel 里面的数据就是 numpy 规范的，所以 numpy+pandas是最好的处理、分析 excel 的工具。                
