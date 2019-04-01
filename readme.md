@@ -27,7 +27,7 @@ python自带的那些list不好用，因为python的array list【1，1.2， ｛2
 这样会增加不必要的空间，对大规模数据或者表格，python会力不从心，变得很慢的。                      
                
                        
-                              
+-----------------------------------------              
                         
 不知道你发现了吗，今天写的numpy array 都是统一int 或者float，（或者str也可以）                
 但是一个variable name只能有一种type，回忆一下np.array(list, dtype = int) 这个设定。        
