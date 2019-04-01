@@ -23,7 +23,7 @@ https://www.hackerrank.com/domains/sql
  
 学python的三周，是为了今天的内容打基础，之后都是今天这样的，                 
 
-python自带的那些list不好用，因为python的array list【1，1.2， ｛212：342｝，【2132，3234】，55】              
+python自带的那些list不好用，因为python的array list可以是：【1，1.2， ｛212：342｝，【2132，3234】，55】              
 这样会增加不必要的空间，对大规模数据或者表格，python会力不从心，变得很慢的。                      
                
                        
