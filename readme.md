@@ -27,7 +27,16 @@ python自带的那些list不好用，因为python的array list【1，1.2， ｛2
 这样会增加不必要的空间，对大规模数据或者表格，python会力不从心，变得很慢的。                      
 
 不知道你发现了吗，今天写的numpy array 都是统一int 或者float，（或者str也可以）                
-但是一个variable name只能有一种type，回忆一下np.array(list, dtype = int) 这个设定。              
+但是一个variable name只能有一种type，回忆一下np.array(list, dtype = int) 这个设定。        
+这个设定，大大方便了存储、调用、操作的效率，        
+
+在 Houston 解释过的，numpy a = [1311, 1143, 19115.... 17718] 这样单一type存储，          
+使得我们可以通过 a[0] + len(int) 直接访问到下一个element，和python截然不同，            
+python的list下一个的大小不确定，可能是一个巨大的dictionary，也可以是个空list，           
+需要先数一遍当前element大小，才能知道下一个从哪里开始（当前element的末尾）             
+
+
+
 
 你说这不巧嘛～ 
 正好，excel 里面的数据每一列的type都是统一的， pandas是用来操作整理excel数据的，              
