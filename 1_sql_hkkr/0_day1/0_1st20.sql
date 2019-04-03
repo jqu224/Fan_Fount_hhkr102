@@ -123,14 +123,28 @@ WHERE CITY NOT LIKE '[AEIOU]%[AEIOU]'
 
 17
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://www.hackerrank.com/challenges/weather-observation-station-12/problem?h_r=next-challenge&h_v=zen&h_r=next-challenge&h_v=zen
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY LIKE '[^AIOUE]%[^AEIOU]'               
+                      
+                      
+18
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://www.hackerrank.com/challenges/more-than-75-marks/problem?h_r%5B%5D
+SELECT NAME
+FROM STUDENTS
+WHERE MARKS > 75
+ORDER BY RIGHT(NAME, 3), ID
+-- ORDER BY SUBSTR(NAME,LENGTH(NAME)-3,3), ID
+                      
+19
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
                       
+20
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
                       
-                      
-                      
-                      
-SELECT City
-FROM STATION
-WHERE City Like '[aeiou]%[aeiou]'
+                       
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
