@@ -100,11 +100,35 @@ SELECT City
 FROM STATION
 WHERE City Like '[aeiou]%[aeiou]'
 
+                      
 15
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://www.hackerrank.com/challenges/weather-observation-station-10/problem
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY NOT LIKE "%[AEIOU]"
+--WHERE UPPER(CITY) LIKE '%[^AEIOU]'
+ORDER BY CITY
 
 
+16
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+https://www.hackerrank.com/challenges/weather-observation-station-11/problem?h_r=next-challenge&h_v=zen
+SELECT DISTINCT CITY
+FROM STATION 
+WHERE CITY NOT LIKE '[AEIOU]%[AEIOU]'
+                      
+                      
 
+
+17
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                      
+                      
+                      
+                      
+                      
 SELECT City
 FROM STATION
 WHERE City Like '[aeiou]%[aeiou]'
