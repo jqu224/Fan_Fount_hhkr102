@@ -140,11 +140,18 @@ ORDER BY RIGHT(NAME, 3), ID
                       
 19
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
+https://www.hackerrank.com/challenges/name-of-employees/
+SELECT NAME
+FROM EMPLOYEE
+ORDER BY NAME
                       
 20
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
-                      
+https://www.hackerrank.com/challenges/salary-of-employees/
+SELECT NAME
+FROM EMPLOYEE
+WHERE SALARY > 2000 AND MONTHS < 10
+ORDER BY EMPLOYEE_ID
                        
 
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
