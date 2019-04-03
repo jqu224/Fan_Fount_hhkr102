@@ -69,15 +69,8 @@ from station
 10
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 https://www.hackerrank.com/challenges/weather-observation-station-5/problem
-select top 1 CITY, len(CITY)
-from station 
-order by len(CITY), city;
-
-11
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-select TOP 1 CITY, len(CITY)
-from station 
-order by len(CITY) desc, city
+SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY LENGTH(CITY), CITY LIMIT 1;
+SELECT CITY, LENGTH(CITY) FROM STATION ORDER BY LENGTH(CITY) DESC, CITY LIMIT 1;
 
 12
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
