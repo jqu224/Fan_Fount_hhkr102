@@ -1,6 +1,6 @@
 1
 -----------------------------------------
--- https://leetcode.com/problems/big-countries/submissions/
+-- https://leetcode.com/problems/big-countries/ 
 # Write your MySQL query statement below
 
 SELECT 
@@ -13,6 +13,7 @@ WHERE area > 3000000 or population > 25000000
 
 2
 -----------------------------------------
+https://leetcode.com/problems/shortest-distance-in-a-line
 SELECT MIN(ABS(p1.x - p2.x)) AS `shortest`
 FROM point p1, point p2
 WHERE p1.x != p2.x
@@ -24,6 +25,7 @@ WHERE p1.x != p2.x
 
 3
 -----------------------------------------
+https://leetcode.com/problems/swap-salary
 UPDATE salary
 set sex =
 CASE sex
