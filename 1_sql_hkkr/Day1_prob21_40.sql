@@ -13,7 +13,7 @@ CASE
         CASE 
         WHEN A = B AND B = C THEN 'Equilateral' 
         WHEN A = B OR B = C OR A = C THEN 'Isosceles' 
-        WHEN A != B OR B != C OR A != C THEN 'Scalene' 
+        ELSE 'Scalene' 
         END 
     ELSE 'Not A Triangle' 
 END 
