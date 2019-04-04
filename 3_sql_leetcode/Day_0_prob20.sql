@@ -42,7 +42,13 @@ WHERE referee_id != 2 or referee_id is null
 
 5
 -----------------------------------------
-
+https://leetcode.com/problems/customer-placing-the-largest-number-of-orders
+Select customer_number from orders
+group by customer_number
+order by count(*) Desc
+Limit 1
+                 
+                 
 
 6
 -----------------------------------------
