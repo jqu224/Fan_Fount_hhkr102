@@ -53,13 +53,15 @@ How about the cumulative accept rate for every day?
 🐳----------------🐳----------------🐳----------------🐳----------------🐳----------------🐳----------------
 
 SELECT ROUND(
-          IFNULL( (SELECT             
+          IFNULL(   (SELECT             
                       COUNT(DISTINCT requester_id, accepter_id)          
-                    FROM request_accepted)
+                    FROM request_accepted
+                    )
                     /             
                     (SELECT COUNT(DISTINCT sender_id, send_to_id) 
                       FROM friend_request
-                    ), 0)
+                    )
+                 , 0)
               , 2) AS accept_rate;           
 =============
 
