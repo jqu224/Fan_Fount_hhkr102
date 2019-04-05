@@ -44,3 +44,9 @@ FROM (
 ) t
 WHERE t.orderID is null
 ORDER BY t.Name
+
+
+🐳----------------
+SELECT NAME AS Customers
+FROM CUSTOMERS
+WHERE ID NOT IN (SELECT CUSTOMERID FROM ORDERS)
