@@ -24,3 +24,12 @@ SELECT DISTINCT EMAIL
 FROM PERSON
 GROUP BY EMAIL
 HAVING COUNT(EMAIL) > 1
+
+-- this is slow
+SELECT DISTINCT p1.Email
+FROM Person AS p1, Person AS p2
+WHERE p1.Id <> p2.Id and p1.Email = p2.Email
+
+
+
+
