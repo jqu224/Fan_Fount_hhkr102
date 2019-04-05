@@ -60,8 +60,17 @@ SELECT ROUND(
               (SELECT COUNT(DISTINCT sender_id, send_to_id) 
                 FROM friend_request
               ), 0),2 ) AS accept_rate;           
+=============
+
+select
+case
+when count(distinct f1.sender_id, f1.send_to_id)=0 then 0.0
+else round(count(distinct r1.requester_id, r1.accepter_id)/count(distinct f1.sender_id, f1.send_to_id),2)
+end as accept_rate
+from request_accepted as r1, friend_request as f1
 
 
+=============
 SELECT 
     CASE 
     WHEN COUNT(*) = 0 THEN 0.0
