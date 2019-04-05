@@ -58,7 +58,8 @@ SELECT ROUND(
               FROM request_accepted)
               /             
               (SELECT COUNT(DISTINCT sender_id, send_to_id) 
-                FROM friend_request),0),2) AS accept_rate;           
+                FROM friend_request
+              ), 0),2 ) AS accept_rate;           
 
 
 SELECT 
