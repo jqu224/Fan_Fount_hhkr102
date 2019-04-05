@@ -25,10 +25,16 @@ FROM PERSON
 GROUP BY EMAIL
 HAVING COUNT(EMAIL) > 1
 
+-- 🐳:
+-- WHERE CANT BE USED HERE
+-- You can't use an aggregate directly in a WHERE clause
+
+
 -- this is slow
 SELECT DISTINCT p1.Email
 FROM Person AS p1, Person AS p2
 WHERE p1.Id <> p2.Id and p1.Email = p2.Email
+
 
 -- this is slow 2
 SELECT DISTINCT p1.Email
