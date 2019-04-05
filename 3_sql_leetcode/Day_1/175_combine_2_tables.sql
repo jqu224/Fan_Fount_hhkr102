@@ -28,3 +28,14 @@ Write a SQL query for a report that provides the following information for each 
 ```
 FirstName, LastName, City, State
 ```
+🐳---------🐳---------🐳---------🐳---------🐳---------🐳---------🐳---------🐳---------
+SELECT 
+    p.FirstName
+    , p.LastName
+    , a.City
+    , a.State
+FROM Person AS p
+LEFT JOIN Address AS a
+ON p.PersonId = a.PersonId
+
+
