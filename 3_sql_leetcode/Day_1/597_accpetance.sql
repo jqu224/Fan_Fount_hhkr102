@@ -74,30 +74,31 @@ from request_accepted as r1, friend_request as f1
 
 
 =============
-SELECT 
-    CASE 
-    WHEN COUNT(*) = 0 THEN 0.0
-    ELSE ROUND(SUM(A.ACCEPTED) / COUNT(*), 2) 
-    END AS accept_rate
-FROM (
-    SELECT  
-        CASE
-        WHEN req.request_date <= acc.accept_date THEN 1
-        ELSE 0
-        END AS ACCEPTED
-    FROM friend_request AS req
-    LEFT JOIN (
-        SELECT  
-            requester_id 
-            , accepter_id
-            , MAX(accept_date) AS accept_date
-        FROM request_accepted AS acc 
-            GROUP BY acc.accepter_id , acc.requester_id  
-    ) AS acc
-    ON req.sender_id = acc.requester_id 
-        AND req.send_to_id = acc.accepter_id 
-    GROUP BY req.sender_id, req.send_to_id
-) AS A 
+this is wrong
+-- SELECT 
+--     CASE 
+--     WHEN COUNT(*) = 0 THEN 0.0
+--     ELSE ROUND(SUM(A.ACCEPTED) / COUNT(*), 2) 
+--     END AS accept_rate
+-- FROM (
+--     SELECT  
+--         CASE
+--         WHEN req.request_date <= acc.accept_date THEN 1
+--         ELSE 0
+--         END AS ACCEPTED
+--     FROM friend_request AS req
+--     LEFT JOIN (
+--         SELECT  
+--             requester_id 
+--             , accepter_id
+--             , MAX(accept_date) AS accept_date
+--         FROM request_accepted AS acc 
+--             GROUP BY acc.accepter_id , acc.requester_id  
+--     ) AS acc
+--     ON req.sender_id = acc.requester_id 
+--         AND req.send_to_id = acc.accepter_id 
+--     GROUP BY req.sender_id, req.send_to_id
+-- ) AS A 
 
 
 
