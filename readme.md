@@ -6,7 +6,7 @@ sql执行顺序 
 (2) on                   
 (4) where          
 (5) group by   (开始使用select中的别名，后面的语句中都可以使用)           
-(6) avg,sum....          
+(6) avg, sum, count, max, min.... aggregate()          
 (7) having          
 (8) select          
 (9) distinct          
