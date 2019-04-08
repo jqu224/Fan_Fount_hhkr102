@@ -1,7 +1,27 @@
 Here we are going to learn SQL    
 ----------------------
-          &&  
-  --------------------
+sql执行顺序 
+(1)from 
+(3) join 
+(2) on 
+(4) where 
+(5)group by(开始使用select中的别名，后面的语句中都可以使用)
+(6) avg,sum.... 
+(7)having 
+(8) select 
+(9) distinct 
+
+(10) order by
+(11) limit 
+
+
+--------------------- 
+作者：猪哥66 
+来源：CSDN 
+原文：https://blog.csdn.net/u014044812/article/details/51004754 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+--------------------
 have lots of fun with easy algorithm exercise.   
 -------------------
 
