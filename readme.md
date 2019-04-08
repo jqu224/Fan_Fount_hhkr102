@@ -1,43 +1,42 @@
 Here we are going to learn SQL    
 ----------------------
-sql执行顺序 
-(1)from 
-(3) join 
-(2) on 
-(4) where 
-(5)group by(开始使用select中的别名，后面的语句中都可以使用)
-(6) avg,sum.... 
-(7)having 
-(8) select 
-(9) distinct 
+sql执行顺序              
+(1)from                   
+(3) join                   
+(2) on                   
+(4) where          
+(5) group by   (开始使用select中的别名，后面的语句中都可以使用)           
+(6) avg,sum....          
+(7) having          
+(8) select          
+(9) distinct          
+(10) order by                       
+(11) limit                        
+              
+              
+---------------------               
+作者：猪哥66               
+来源：CSDN               
+原文：https://blog.csdn.net/u014044812/article/details/51004754               
+版权声明：本文为博主原创文章，转载请附上博文链接！              
+              
 
-(10) order by
-(11) limit 
-
-
---------------------- 
-作者：猪哥66 
-来源：CSDN 
-原文：https://blog.csdn.net/u014044812/article/details/51004754 
-版权声明：本文为博主原创文章，转载请附上博文链接！
-
-
-(8)SELECT  (9) DISTINCT (11) <TOP_specification> <select_list>
-(1) FROM          <left_table>
-(3) JOIN          <join_type> <right_table>
-(2) ON            <join_condition>
-(4) WHERE         <where_condition>
-(5) GROUP BY      <group_by_list>
-(6) WITH          {CUBE | ROLLUP}
-(7) HAVING        <having_condition>
-(10) ORDER BY     <order_by_list> 
-(11) limit 
-
-作者：丶沙工
-链接：https://www.jianshu.com/p/bb19b6b0fdc3
-来源：简书
-简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
-
+(8)SELECT     (9) DISTINCT     (11) <TOP_specification>    <select_list>              
+(1) FROM                                                   <left_table>              
+(3) JOIN                                                   <join_type> <right_table>              
+(2) ON                                                     <join_condition>              
+(4) WHERE                                                  <where_condition>                            
+(5) GROUP BY                                               <group_by_list>              
+(6) WITH                                                   {CUBE | ROLLUP}              
+(7) HAVING                                                 <having_condition>              
+(10) ORDER BY                                              <order_by_list>               
+(11) LIMIT               
+              
+作者：丶沙工              
+链接：https://www.jianshu.com/p/bb19b6b0fdc3              
+来源：简书              
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。              
+              
 
 
 --------------------
