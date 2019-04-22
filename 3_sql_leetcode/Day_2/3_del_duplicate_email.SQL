@@ -1,25 +1,26 @@
-
-ttps://leetcode.com/problems/rising-temperature/
+https://leetcode.com/problems/delete-duplicate-emails/
 +---------+------------+---------+------------+---------+------------+---------+------------+
-Given a Weather table, write a SQL query to find all dates' Ids with higher temperature compared to its previous (yesterday's) dates.
+Write a SQL query to delete all duplicate email entries in a table named Person, keeping only unique emails based on its smallest Id.
 
-+---------+------------------+------------------+
-| Id(INT) | RecordDate(DATE) | Temperature(INT) |
-+---------+------------------+------------------+
-|       1 |       2015-01-01 |               10 |
-|       2 |       2015-01-02 |               25 |
-|       3 |       2015-01-03 |               20 |
-|       4 |       2015-01-04 |               30 |
-+---------+------------------+------------------+
-For example, return the following Ids for the above Weather table:
++----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
+| 3  | john@example.com |
++----+------------------+
+Id is the primary key column for this table.
+For example, after running your query, the above Person table should have the following rows:
 
-+----+
-| Id |
-+----+
-|  2 |
-|  4 |
-+----+
++----+------------------+
+| Id | Email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
++----+------------------+
+Note:
 
+Your output is the whole Person table after executing your sql. Use delete statement.
 
 ===== 🐚 ===== 🐚 ===== 🐚 ===== 🐚 ===== 🐚 ===== 🐚 ===== 🐚 ===== 🐚 ===== 🐚 
 # Write your MySQL query statement below
