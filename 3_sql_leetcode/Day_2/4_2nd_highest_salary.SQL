@@ -21,7 +21,9 @@ Input
 
 Expected
 {"headers":["SecondHighestSalary"],"values":[[null]]}
-这里不能这么写：  因为当只有一个 employee 的时候 leetcode 要 return null，  看下一个 solution
+这里不能这么写：  因为当只有一个 employee 的时候 leetcode 要 return [null]，  
+而我这个，当只有一个 employee 的时候会 return [] 
+                          看下一个 solution
 # Write your MySQL query statement below
 SELECT 
     Salary AS SecondHighestSalary
