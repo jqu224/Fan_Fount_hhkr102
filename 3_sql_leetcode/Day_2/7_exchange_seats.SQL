@@ -29,27 +29,29 @@ Note:
 If the number of students is odd, there is no need to change the last one's seat
 
 
-🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
-
-# Write your MySQL query statement below
-select
-    if(id < (select count(*) from seat)
-       , if(id mod 2=0, id-1, id+1)
-       , if(id mod 2=0, id-1, id)) as id
-   , student
-from seat
-order by id asc;
             
             
 🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
 # Write your MySQL query statement below
 select
     case
-        when id %2 = 0 then id-1
-        when id %2 !=0 and id = (select max(id) from seat) then id
+        when id %2  = 0 then id-1
+        when id %2 != 0 and id = (select max(id) 
+                                  from seat) then id
         else id+1
     end as id
     , student
 from seat
 order by id;
 
+
+🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
+这个理解起来太麻烦了：
+# Write your MySQL query statement below
+select
+    if(id < (select count(*) from seat)
+       , if(id mod 2 = 0, id-1, id+1)
+       , if(id mod 2 = 0, id-1, id)) as id
+   , student
+from seat
+order by id asc;
