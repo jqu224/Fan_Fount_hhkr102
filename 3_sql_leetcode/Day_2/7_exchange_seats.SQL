@@ -44,6 +44,18 @@ select
 from seat
 order by id;
 
+            
+🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
+SELECT
+	CASE
+		WHEN seat.id % 2 <> 0 AND seat.id = (SELECT COUNT(*) FROM seat) THEN seat.id
+		WHEN seat.id % 2 = 0 THEN seat.id - 1
+		ELSE
+			seat.id + 1
+	END as id,
+	student 
+FROM seat
+ORDER BY id
 
 🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
 这个理解起来太麻烦了：
