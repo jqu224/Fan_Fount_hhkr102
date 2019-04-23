@@ -21,10 +21,18 @@ Given the Employee table, write a SQL query that finds out managers with at leas
 +-------+
 Note:
 No one would report to himself.
-
+🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
+# Write your MySQL query statement below
+SELECT e1.Name
+FROM EMPLOYEE e1
+join  EMPLOYEE e2
+on e1.Id = e2.ManagerID
+GROUP BY e1.Name 
+HAVING COUNT(e1.Name) >= 5
 
 
 🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  🐝 ------  
+others:（菜）
 # Write your MySQL query statement below
 SELECT Name
 FROM EMPLOYEE
