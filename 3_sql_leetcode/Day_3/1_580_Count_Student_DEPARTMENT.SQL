@@ -57,7 +57,8 @@ SELECT
     d.dept_name
     , COUNT(s.student_id) AS student_number
 FROM student AS s
-RIGHT JOIN department AS d ON s.dept_id = d.dept_id
+    RIGHT JOIN department AS d 
+    ON s.dept_id = d.dept_id
 GROUP BY d.dept_name
 ORDER BY 2 DESC, 1
 
