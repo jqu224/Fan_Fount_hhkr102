@@ -1,4 +1,4 @@
-In social network like Facebook or Twitter, people send friend requests and accept others' requests as well.
+-- In social network like Facebook or Twitter, people send friend requests and accept others' requests as well.
 Table request_accepted holds the data of friend acceptance, while requester_id and accepter_id both are the id of a person.
 | requester_id | accepter_id | accept_date|
 |--------------|-------------|------------|
