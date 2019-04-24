@@ -28,3 +28,17 @@ In the real world, multiple people could have the same most number of friends, c
 
 
 ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- 💯
+# Write your MySQL query statement below
+SELECT 
+    A AS id
+    , COUNT(A) AS num
+FROM (  SELECT requester_id AS A
+        FROM request_accepted
+        UNION ALL
+        SELECT  accepter_id AS A
+        FROM request_accepted) AS NEW
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1
+
+➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- 💯
