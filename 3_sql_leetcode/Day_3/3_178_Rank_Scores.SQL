@@ -22,3 +22,21 @@ For example, given the above Scores table, your query should generate the follow
 | 3.65  | 3    |
 | 3.50  | 4    |
 +-------+------+
+
+
+➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- 💯
+-- Write your MySQL query statement below
+SELECT s1.score as Score
+       , count(*) as Rank
+From Scores as s1
+LEFT Join (SELECT DISTINCT SCORE 
+           FROM Scores) as s2 
+       on s1.Score <= s2.Score
+Group by s1.id
+Order by count(*)
+
+
+
+
+➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- 💯
+
