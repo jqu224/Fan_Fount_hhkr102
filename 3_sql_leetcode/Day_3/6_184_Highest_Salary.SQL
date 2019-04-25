@@ -57,17 +57,18 @@ WHERE
     
 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 
 SELECT
-    Department.name AS 'Department',
-    Employee.name AS 'Employee',
+    d.name AS 'Department',
+    e.name AS 'Employee',
     Salary
 FROM
-    Employee
-    JOIN Department 
-    ON Employee.DepartmentId = Department.Id
+    Employee AS e
+    JOIN Department AS d
+    ON e.DepartmentId = d.Id
 WHERE
-    (Employee.DepartmentId , Salary) IN
+    (e.DepartmentId , Salary) IN
     (   SELECT
-            DepartmentId, MAX(Salary)
+            DepartmentId
+     	    , MAX(Salary)
         FROM
             Employee
         GROUP BY DepartmentId
