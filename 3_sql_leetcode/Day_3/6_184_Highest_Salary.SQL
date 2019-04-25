@@ -65,7 +65,7 @@ FROM
     JOIN Department AS d
     ON e.DepartmentId = d.Id
 WHERE
-    (e.DepartmentId , Salary) IN
+    (e.DepartmentId , e.Salary) IN
     (   SELECT
             DepartmentId
      	    , MAX(Salary)
