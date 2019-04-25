@@ -39,4 +39,51 @@ Order by count(*)
 
 
 ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- 💯
+(SELECT DISTINCT SCORE 
+           FROM Scores) as s2 
+this gives us only 4 scores:
 
++-------+
+| Score |
++-------+
+| 3.50  |
+| 3.65  | 
+| 3.85  |
+| 4.00  | 
++-------+     
+
+From Scores as s1
+LEFT Join (SELECT DISTINCT SCORE 
+           FROM Scores) as s2 
+       on s1.Score <= s2.Score   
+thus,  
++-------+---------+-----------+
+| s1.Id | s1.Score|  s2.Score |
++-------+---------+-----------+
+| 1     | 3.50    |  3.5
+| 1     | 3.50    |  3.65 
+| 1     | 3.50    |  3.85
+| 1     | 3.50    |  4.00
+group by s1.id and count() => 4
+
+| 2     | 3.65    |  3.65 
+| 2     | 3.65    |  3.85
+| 2     | 3.65    |  4.00
+group by s1.id and count() => 3
+
+| 3     | 3.65    |  3.65 
+| 3     | 3.65    |  3.85
+| 3     | 3.65    |  4.00
+group by s1.id and count() => 3
+ 
+| 4     | 3.85    |  3.85
+| 4     | 3.85    |  4.00
+group by s1.id and count() => 2
+
+| 5     | 4.00    |  4.00
+group by s1.id and count() => 1
+
+| 6     | 4.00    |  4.00
+
+group by s1.id and count() => 1
++-------+---------+
