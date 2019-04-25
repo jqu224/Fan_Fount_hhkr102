@@ -1,4 +1,4 @@
-In facebook, there is a follow table with two columns: followee, follower.
+-- In facebook, there is a follow table with two columns: followee, follower.
 
 Please write a sql query to get the amount of each follower’s follower if he/she has one.
 
@@ -41,3 +41,11 @@ GROUP BY f1.follower
 
 
 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 
+select 
+    distinct f.follower as follower
+    , count(distinct f1.follower) as num
+from follow f 
+    join follow f1
+    on f.follower =f1.followee
+group by 1
+order by 1
