@@ -18,13 +18,13 @@ should output:
 |     B       |  2         |
 |     D       |  1         |
 +-------------+------------+
-Explaination:
-Both B and D exist in the follower list, when as a followee, B's follower is C and D, 
-and D's follower is E. A does not exist in follower list.
+-- Explaination:
+-- Both B and D exist in the follower list, when as a followee, B's follower is C and D, 
+-- and D's follower is E. A does not exist in follower list.
 
-Note:
-Followee would not follow himself/herself in all cases.
-Please display the result in follower's alphabet order.
+-- Note:
+-- Followee would not follow himself/herself in all cases.
+-- Please display the result in follower's alphabet order.
 
 
 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 ----- 🌴 
