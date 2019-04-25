@@ -45,11 +45,11 @@ FROM
         d.Id AS did
         , d.Name AS dName
         , MAX(e.Salary) AS dsalary
-    FROM
-        Employee AS e
-        , Department AS d
-    WHERE e.DepartmentId = d.Id
-    GROUP BY d.Id) AS t
+	    FROM
+		Employee AS e
+		, Department AS d
+	    WHERE e.DepartmentId = d.Id
+	    GROUP BY d.Id) AS t
 WHERE 
     e.Salary = T.dsalary
     AND e.DepartmentId = T.did 
@@ -62,8 +62,8 @@ SELECT
     Salary
 FROM
     Employee
-        JOIN
-    Department ON Employee.DepartmentId = Department.Id
+    JOIN Department 
+    ON Employee.DepartmentId = Department.Id
 WHERE
     (Employee.DepartmentId , Salary) IN
     (   SELECT
