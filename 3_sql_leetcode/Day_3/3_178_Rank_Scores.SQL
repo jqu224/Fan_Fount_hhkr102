@@ -41,6 +41,7 @@ Order by count(*)
 ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- ➕ ---- ✖️ ---- 💯
 (SELECT DISTINCT SCORE 
            FROM Scores) as s2 
+           
 this gives us only 4 scores:
 
 +-------+
@@ -87,3 +88,14 @@ group by s1.id and count() => 1
 
 group by s1.id and count() => 1
 +-------+---------+
+
+
+overall:
+
+| s1.Id | s1.Score|  rank |
+| 1     | 3.50    |  4
+| 2     | 3.65    |  3
+| 3     | 3.65    |  3
+| 4     | 3.85    |  2
+| 5     | 4.00    |  1
+| 6     | 4.00    |  1
