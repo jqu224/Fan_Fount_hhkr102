@@ -2,7 +2,7 @@ https://www.hackerrank.com/challenges/the-company/
 
 
 --- 🍤 --- 🍤 --- 🍤 --- 🍤 --- 🍤 --- 🍤 --- 🍤 --- 
-
+ 
 select c.company_code, c.founder, 
     count(distinct l.lead_manager_code), count(distinct s.senior_manager_code), 
     count(distinct m.manager_code),count(distinct e.employee_code) 
