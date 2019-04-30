@@ -1,6 +1,7 @@
 Here we are going to learn SQL    
 ----------------------
-sql执行顺序              
+sql执行顺序      
+     
 (1)from                   
 (3) join                   
 (2) on                   
