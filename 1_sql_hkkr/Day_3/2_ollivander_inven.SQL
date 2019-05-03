@@ -1,6 +1,4 @@
-/*
-Enter your query here.
-*/
+https://www.hackerrank.com/challenges/harry-potter-and-wands
 
 select a.id, b.age, a.coins_needed, a.power 
 
