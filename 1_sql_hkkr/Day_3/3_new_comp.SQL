@@ -1,6 +1,6 @@
-/*
-Enter your query here.
-*/
+https://www.hackerrank.com/challenges/the-company/problem
+----    ----    ----    ----    ----    ----    ----    ----    
+
 select
     c.company_code
     , c.founder
