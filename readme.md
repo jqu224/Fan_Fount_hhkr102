@@ -20,7 +20,7 @@ sql执行顺序 
 原文：https://blog.csdn.net/u014044812/article/details/51004754               
 版权声明：本文为博主原创文章，转载请附上博文链接！       
 
----------------------               
+---------------------                 
               
 
 (8)SELECT     (9) DISTINCT     (11) <TOP_specification>    <select_list>              
