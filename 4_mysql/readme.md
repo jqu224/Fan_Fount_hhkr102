@@ -4,8 +4,11 @@
 for mac:
 after installation, 
   
-'''  
+``` bash  
   export PATH=${PATH}:/usr/local/mysql/bin/
-'''
+```
 the command above will add mysql PATH to mac so that we can launch mysql using 
+
+``` bash  
   mysql -u root -p
+```
