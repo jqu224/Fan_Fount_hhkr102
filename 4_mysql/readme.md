@@ -99,3 +99,25 @@ INSERT INTO table_name
 VALUES (value1, value2, value3, ...);
 
 ```
+
+
+``` mysql
+mysql> show columns from weekly_rent;
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| id            | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| what          | varchar(32)      | NO   |     | NULL    |                |
+| payer         | varchar(32)      | NO   |     | NULL    |                |
+| date          | datetime         | NO   |     | NULL    |                |
+| jiacheng_qu   | float            | YES  |     | NULL    |                |
+| xiaozheng_guo | float            | YES  |     | NULL    |                |
+| yedi_wang     | float            | YES  |     | NULL    |                |
++---------------+------------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+```
+``` mysql
+mysql> insert into weekly_rent values(null, 'hot wings', 'qu', now(), 'hot wings', 0,0,0);
+ERROR 1136 (21S01): Column count do
+
+```
