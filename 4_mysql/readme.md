@@ -129,3 +129,8 @@ mysql> select * from weekly_rent;
 1 row in set (0.00 sec)
 
 ```
+
+``` mysql
+mysql >> insert into weekly_rent values(null,'in n out', 26,'Qu', now(), 0,0,0);
+```
+
