@@ -133,4 +133,19 @@ mysql> select * from weekly_rent;
 ``` mysql
 mysql >> insert into weekly_rent values(null,'in n out', 26,'Qu', now(), 0,0,0);
 ```
+``` mysql
+mysql> insert into weekly_rent values(null,'hot wings', 44,'Qu', 20190525, 0,0,0);
+Query OK, 1 row affected (0.01 sec)
 
+mysql> select * from weekly_rent;
++----+-----------+--------+-------+---------------------+-------------+---------------+-----------+
+| id | What      | Amount | Payer | date                | Jiacheng_Qu | Xiaozheng_Guo | Yedi_Wang |
++----+-----------+--------+-------+---------------------+-------------+---------------+-----------+
+|  1 | in n out  |     26 | Qu    | 2019-05-27 22:51:10 |           0 |             0 |         0 |
+|  2 | hot wings |     44 | Qu    | 2019-05-25 00:00:00 |           0 |             0 |         0 |
++----+-----------+--------+-------+---------------------+-------------+---------------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> 
+
+```
