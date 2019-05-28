@@ -117,7 +117,15 @@ mysql> show columns from weekly_rent;
 7 rows in set (0.00 sec)
 ```
 ``` mysql
-mysql> insert into weekly_rent values(null, 'hot wings', 'qu', now(), 'hot wings', 0,0,0);
-ERROR 1136 (21S01): Column count do
+mysql> insert into weekly_rent values(1,'hot wings', 'qu', now(), 0,0,0);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from weekly_rent;
++----+-----------+-------+---------------------+-------------+---------------+-----------+
+| id | what      | payer | date                | jiacheng_qu | xiaozheng_guo | yedi_wang |
++----+-----------+-------+---------------------+-------------+---------------+-----------+
+|  1 | hot wings | qu    | 2019-05-27 22:46:38 |           0 |             0 |         0 |
++----+-----------+-------+---------------------+-------------+---------------+-----------+
+1 row in set (0.00 sec)
 
 ```
