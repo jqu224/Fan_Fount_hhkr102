@@ -19,7 +19,7 @@ mysql> create database Lawrence_387;
 mysql> USE menagerie
 ```
 Your database needs to be created only once, but you must select it for use each time you begin a mysql session. You can do this by issuing a USE statement as shown in the example. Alternatively, you can select the database on the command line when you invoke mysql. Just specify its name after any connection parameters that you might need to provide. For example:
-```
+``` mysql
 shell> mysql -h host -u user -p menagerie
 Enter password: ********
 ```
@@ -38,7 +38,7 @@ CREATE TABLE 'FBxUnicorn'.'weekly_rent' (
     yedi_wang FLOAT
 );
 ```
-```
+``` mysql
 mysql> show databases;
 +--------------------+
 | Database           |
