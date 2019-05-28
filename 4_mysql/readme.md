@@ -149,3 +149,40 @@ mysql> select * from weekly_rent;
 mysql> 
 
 ```
+
+```mysql
+mysql> insert into weekly_rent values(null,'costco', 11,'Qu', 20190518, 0, 120, 0);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from weekly_rent;
++----+--------------+--------+-------+---------------------+-------------+---------------+-----------+
+| id | What         | Amount | Payer | date                | Jiacheng_Qu | Xiaozheng_Guo | Yedi_Wang |
++----+--------------+--------+-------+---------------------+-------------+---------------+-----------+
+|  1 | in n out     |     26 | Qu    | 2019-05-27 22:51:10 |           0 |             0 |         0 |
+|  2 | hot wings    |     44 | Qu    | 2019-05-25 00:00:00 |           0 |             0 |         0 |
+|  3 | costco_lunch |     11 | Qu    | 2019-05-18 00:00:00 |           2 |             0 |         0 |
+|  4 | costco       |     11 | Qu    | 2019-05-18 00:00:00 |           0 |           120 |         0 |
++----+--------------+--------+-------+---------------------+-------------+---------------+-----------+
+
+
+
+```
+
+
+```mysql
+mysql> delete from weekly_rent where id = 4;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> delete from weekly_rent where id = 4;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from weekly_rent;
++----+--------------+--------+-------+---------------------+-------------+---------------+-----------+
+| id | What         | Amount | Payer | date                | Jiacheng_Qu | Xiaozheng_Guo | Yedi_Wang |
++----+--------------+--------+-------+---------------------+-------------+---------------+-----------+
+|  1 | in n out     |     26 | Qu    | 2019-05-27 22:51:10 |           0 |             0 |         0 |
+|  2 | hot wings    |     44 | Qu    | 2019-05-25 00:00:00 |           0 |             0 |         0 |
+|  3 | costco_lunch |     11 | Qu    | 2019-05-18 00:00:00 |           2 |             0 |         0 |
++----+--------------+--------+-------+---------------------+-------------+---------------+-----------+
+3 rows in set (0.00 sec)
+```
