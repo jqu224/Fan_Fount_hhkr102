@@ -15,7 +15,8 @@ the command above will add mysql PATH to mac so that we can launch mysql using
 3) create a database
 ```
 mysql> CREATE DATABASE menagerie;
-USE menagerie
+mysql> create database Lawrence_387;
+mysql> USE menagerie
 ```
 Your database needs to be created only once, but you must select it for use each time you begin a mysql session. You can do this by issuing a USE statement as shown in the example. Alternatively, you can select the database on the command line when you invoke mysql. Just specify its name after any connection parameters that you might need to provide. For example:
 ```
@@ -36,4 +37,31 @@ CREATE TABLE 'FBxUnicorn'.'weekly_rent' (
     xiaozheng_guo FLOAT,
     yedi_wang FLOAT
 );
+```
+```
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| FBxUnicorn         |
+| information_schema |
+| Lawrence_387       |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.00 sec)
+
+mysql> use fbxunicorn
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> show tables;
++----------------------+
+| Tables_in_fbxunicorn |
++----------------------+
+| wk22_may27           |
++----------------------+
+1 row in set (0.00 sec)
 ```
