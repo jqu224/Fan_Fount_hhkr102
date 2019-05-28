@@ -65,3 +65,7 @@ mysql> show tables;
 +----------------------+
 1 row in set (0.00 sec)
 ```
+
+```
+show columns from weekly_rent;
+```
