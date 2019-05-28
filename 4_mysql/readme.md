@@ -87,9 +87,9 @@ mysql> show columns from weekly_rent;
 ```
 
 
-``` mysql
-The first way specifies both the column names and the values to be inserted:
 
+The first way specifies both the column names and the values to be inserted:
+``` mysql
 INSERT INTO table_name (column1, column2, column3, ...)
 VALUES (value1, value2, value3, ...);
 ```
