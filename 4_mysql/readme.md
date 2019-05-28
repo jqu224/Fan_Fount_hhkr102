@@ -67,5 +67,21 @@ mysql> show tables;
 ```
 
 ``` mysql
-show columns from weekly_rent;
+mysql> show columns from weekly_rent;
+
+>> 
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| id            | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| name          | char(8)          | NO   |     | NULL    |                |
+| payer         | char(4)          | NO   |     | NULL    |                |
+| date          | datetime         | NO   |     | NULL    |                |
+| what          | varchar(255)     | NO   |     | NULL    |                |
+| jiacheng_qu   | float            | YES  |     | NULL    |                |
+| xiaozheng_guo | float            | YES  |     | NULL    |                |
+| yedi_wang     | float            | YES  |     | NULL    |                |
++---------------+------------------+------+-----+---------+----------------+
+8 rows in set (0.00 sec)
+
 ```
