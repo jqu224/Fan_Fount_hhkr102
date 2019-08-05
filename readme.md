@@ -69,21 +69,23 @@ python自带的那些list不好用，因为python的array list可以是：【1�
                        
 -----------------------------------------              
                         
-不知道你发现了吗，今天写的numpy array 都是统一int 或者float，（或者str也可以）                
-但是一个variable name只能有一种type，回忆一下np.array(list, dtype = int) 这个设定。        
+回忆一下np.array(list, dtype = int) 这个设定，
+不知道你发现了吗，今天写的 numpy array 都是统一 int 或者 float，（或者str也可以）                
+但是一个 variable name 只能有一种type，        
 这个设定，大大方便了存储、调用、操作的效率，        
 
-在 Houston 解释过的，numpy a = [1311, 1143, 19115.... 17718] 这样单一type存储，          
-使得我们可以通过 a[0] + len(int) 直接访问到下一个element，和python截然不同，            
-python的list下一个的大小不确定，可能是一个巨大的dictionary，也可以是个空list，           
-需要先数一遍当前element大小，才能知道下一个从哪里开始（当前element的末尾）             
-
+在 Houston 解释过的，numpy array of int: 
+a = [1311, 1143, 19115.... 17718] 这样单一 int type array 存储，          
+使得我们可以通过 a[0] + len(int) 直接访问到下一个 element a[1]，和纯 python 截然不同，            
+纯 python 的 list 下一个的大小不确定，可能是一个巨大的dictionary，也可以是个空list，           
+需要先数一遍当前element大小，才能知道下一个 element 从哪里开始（很难找到当前 element 的末尾）             
+这样一来，纯 python 速度就很慢，而经过 numpy 处理的 python 就有了速度上的提升。（空间上的这里不说啦）
               
               
 
 -----------------------------------------     
 你说这不巧嘛～ 
-正好，excel 里面的数据每一列的type都是统一的， pandas是用来操作整理excel数据的，              
-而 excel 里面的数据就是 numpy 规范的，所以 numpy+pandas是最好的处理、分析 excel 的工具。                
+正好，excel 里面的数据每一列的type都是统一的，而 pandas 是用来操作整理 excel 数据的，              
+而 excel 里面的数据就是符合 numpy 规范的，所以，这些特性使得 numpy+pandas 是最好的处理、分析 excel 的工具之一。                
 
-sql 更是一样。type统一方便操作。            
+sql 更是一样。create table 的时候，每一个 column 就规定好了统一 data type，规范了 database 的操作。            
