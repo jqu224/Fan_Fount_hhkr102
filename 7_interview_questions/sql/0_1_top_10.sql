@@ -10,7 +10,6 @@ SQL题
 
 1. top10 customer  Top 10 or Dense_Rank()  
 
-```
 table t1:
 id | val | 
 1  |  10
@@ -18,10 +17,8 @@ id | val |
 3  |  18
 4  |  5
 ...
-```
 
 Method A: DENSE_RANK()
-```
 http://www.mysqltutorial.org/mysql-window-functions/mysql-dense_rank-function/       
 # Write your MySQL query statement below
  
@@ -34,10 +31,8 @@ FROM
     t1
 LIMIT 10
 ;
-```
 
 Method B: ORDER BY()
-```
 # Write your MySQL query statement below    
  
 SELECT
@@ -47,9 +42,6 @@ FROM
 ORDER BY 1 DESC
 LIMIT 10
 ;
-
-
-```
 
 
 
