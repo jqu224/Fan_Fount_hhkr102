@@ -79,7 +79,7 @@ a = [1311, 1143, 19115.... 17718] 这样单一 int type array 存储，
 使得我们可以通过 a[0] + len(int) 直接访问到下一个 element a[1]，和纯 python 截然不同，            
 纯 python 的 list 下一个的大小不确定，可能是一个巨大的dictionary，也可以是个空list，           
 需要先数一遍当前element大小，才能知道下一个 element 从哪里开始（很难找到当前 element 的末尾）             
-这样一来，纯 python 速度就很慢，而经过 numpy 处理的 python 就有了速度上的提升。（空间上的这里不说啦）
+总结：纯 python 速度就很慢，而经过 numpy 处理的 python 就有了速度上的提升。（空间上的这里不说啦）
               
               
 
