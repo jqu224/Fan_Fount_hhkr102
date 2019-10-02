@@ -1,7 +1,7 @@
-···
+```
 code style:
 http://google.github.io/styleguide/pyguide.html 
-···
+
 
 leetcode sept 29th
 https://leetcode.com/problems/duplicate-zeros/
@@ -20,3 +20,4 @@ https://leetcode.com/problems/maximum-subarray/
 https://leetcode.com/problems/trapping-rain-water/
 
 
+```
