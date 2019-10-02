@@ -1,5 +1,7 @@
+···
 code style:
 http://google.github.io/styleguide/pyguide.html 
+···
 
 leetcode sept 29th
 https://leetcode.com/problems/duplicate-zeros/
