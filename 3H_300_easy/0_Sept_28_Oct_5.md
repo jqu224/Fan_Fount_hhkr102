@@ -19,5 +19,7 @@ Oct 2nd
 https://leetcode.com/problems/maximum-subarray/
 https://leetcode.com/problems/trapping-rain-water/
 
-
+Oct 3rd
+https://leetcode.com/problems/merge-two-sorted-lists/
+https://leetcode.com/problems/powx-n/
 ```
