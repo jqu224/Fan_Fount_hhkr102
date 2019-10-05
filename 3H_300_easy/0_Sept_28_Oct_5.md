@@ -2,12 +2,18 @@
 code style:
 http://google.github.io/styleguide/pyguide.html 
 
+time complexity
+https://my.oschina.net/u/1246663/blog/227115
+https://www.ranxiaolang.com/static/python_algorithm/chapter1/section6.html
+https://zh.wikipedia.org/wiki/%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6
 
-leetcode sept 29th
+leetcode 
+---------------------
+Sept 29th
 https://leetcode.com/problems/duplicate-zeros/
 https://leetcode.com/problems/rotate-image/
 
-leetcode sept 30th
+Sept 30th
 824 https://leetcode.com/problems/goat-latin/
 55 https://leetcode.com/problems/jump-game/
 
