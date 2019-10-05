@@ -22,4 +22,14 @@ https://leetcode.com/problems/trapping-rain-water/
 Oct 3rd
 https://leetcode.com/problems/merge-two-sorted-lists/
 https://leetcode.com/problems/powx-n/
+
+Oct 4
+
+https://leetcode.com/problems/reverse-integer/description/     
+https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+
+Oct 5
+
+https://leetcode.com/problems/convert-bst-to-greater-tree/
+https://leetcode.com/problems/two-sum-bsts/
 ```
