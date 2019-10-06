@@ -41,5 +41,7 @@ https://leetcode.com/problems/two-sum-bsts/
 
 Oct 6
 
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 https://leetcode.com/problems/k-closest-points-to-origin/
+
 ```
