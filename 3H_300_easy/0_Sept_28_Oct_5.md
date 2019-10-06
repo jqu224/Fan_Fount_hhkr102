@@ -38,4 +38,8 @@ Oct 5
 
 https://leetcode.com/problems/convert-bst-to-greater-tree/
 https://leetcode.com/problems/two-sum-bsts/
+
+Oct 6
+
+https://leetcode.com/problems/k-closest-points-to-origin/
 ```
