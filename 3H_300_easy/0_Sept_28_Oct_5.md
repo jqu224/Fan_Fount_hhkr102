@@ -44,4 +44,8 @@ Oct 6
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 https://leetcode.com/problems/k-closest-points-to-origin/
 
+oct 7
+
+https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
+https://leetcode.com/problems/merge-intervals/description/
 ```
