@@ -62,5 +62,5 @@ https://leetcode.com/problems/task-scheduler/description/
 Oct 10
 
 https://leetcode.com/problems/contains-duplicate/description/   
-https://leetcode.com/problems/course-schedule-ii/description/
+https://leetcode.com/problems/course-schedule
 ```
