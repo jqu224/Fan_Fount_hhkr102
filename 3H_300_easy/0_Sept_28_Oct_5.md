@@ -44,8 +44,23 @@ Oct 6
 https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 https://leetcode.com/problems/k-closest-points-to-origin/
 
-oct 7
+Oct 7
 
 https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/
 https://leetcode.com/problems/merge-intervals/description/
+
+Oct 8 
+
+https://leetcode.com/problems/valid-parentheses/description/   
+https://leetcode.com/problems/rectangle-area/description/
+
+Oct 9 
+
+https://leetcode.com/problems/verifying-an-alien-dictionary/description/  
+https://leetcode.com/problems/task-scheduler/description/
+
+Oct 10
+
+https://leetcode.com/problems/contains-duplicate/description/   
+https://leetcode.com/problems/course-schedule-ii/description/
 ```
