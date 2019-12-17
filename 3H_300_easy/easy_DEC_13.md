@@ -72,3 +72,30 @@ class Solution:
                 r = mid
         return l
 ```
+
+953. Verifying an Alien Dictionary
+```
+class Solution:
+    def isAlienSorted(self, words: List[str], order: str) -> bool:
+        map_ = [0]*26
+        for i, o in enumerate(order):
+            map_[ord(o) - ord("a")] = i
+        ret = [] 
+        for word in words:
+            temp = []
+            for w in word:
+                
+                temp.append(map_[ord(w) - ord("a")])
+            ret.append(tuple(temp))
+        dict_1 = {i:r for i, r in enumerate(ret)}
+        dict_2 = {i:r for i, r in enumerate(sorted(ret))}
+        for k in dict_1:
+            if dict_1[k] == dict_2[k]:
+                pass
+            else:
+                break
+        else:
+            return True
+        return False
+        
+```
