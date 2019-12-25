@@ -31,3 +31,20 @@ class Solution:
             elif i > 0:
                 return True
         return False
+    """
+    pre_sum
+    """
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        mp = {0: -1}
+        prefix_sum = 0
+        for i, num in enumerate(nums):
+            prefix_sum += num
+            if k != 0:
+                prefix_sum = prefix_sum % k
+            if prefix_sum in mp:
+                if i - mp[prefix_sum] > 1:
+                    return True
+            else:
+                mp[prefix_sum] = i
+
+        return False
