@@ -71,3 +71,30 @@ class Solution:
         tail.right = head
         
         return head
+
+class Solution:
+    def treeToDoublyList(self, root: 'Node') -> 'Node':
+          
+    
+        if not root:
+            return 
+        stack = []
+        trav = root
+        prev = None
+        while stack or trav:
+            if trav:
+                stack.append(trav)
+                trav = trav.left
+            else:
+                u = stack.pop()
+                trav = u.right
+                if u:
+                    if prev:
+                        prev.right = u
+                        u.left = prev
+                    else:
+                        head = u
+                    prev = u
+        prev.right = head
+        head.left = prev
+        return head
