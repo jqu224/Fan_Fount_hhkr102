@@ -46,20 +46,28 @@ class Node:
         self.val = val
         self.left = left
         self.right = right
-"""
-
+""" 
 class Solution:
     def treeToDoublyList(self, root: 'Node') -> 'Node':
-        def iot(node, prev=None, nxt=None):
-            low = high = node
-            if node.left: # previous will be largest node in left subtree
-              low, prev = iot(node.left, prev, node)
-            if node.right: # next will be smallest node in right subtree
-              nxt, high = iot(node.right, node, nxt)
-            node.left, node.right = prev, nxt
-            return low, high # smallest node in left tree, largest node in right tree
-
-        if not root: return root
-        low, high = iot(root)
-        low.left, high.right = high, low
-        return low
+         
+        if not root: return None
+		
+		# inorder traversal
+        prv = self.treeToDoublyList(root.left)
+        nxt = self.treeToDoublyList(root.right)
+        
+        head = tail = root
+        if nxt: #then connect nxt
+            tail = nxt.left
+            root.right = nxt
+            nxt.left = root
+        if prv: #then connect prv
+            head = prv
+            root.left = prv.left
+            prv.left.right = root
+			
+        #finally connect head and tail
+        head.left = tail
+        tail.right = head
+        
+        return head
