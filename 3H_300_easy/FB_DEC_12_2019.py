@@ -4,9 +4,8 @@ https://leetcode.com/problems/product-of-array-except-self/
 ```
 [1 2 3 4]
 left =     [ 1  1  2  6 24]
-right = [24 24 12  4  1]
-```
-```
+right = [24 24 12  4  1] 
+
 LEFT DRAGON RIGHT RAINBOW
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
@@ -21,9 +20,8 @@ class Solution:
         ret = []
         for i in range(len(nums)):
             ret.append(left_r[i]*right_l[i+1])
-        return ret    
-```  
-```
+        return ret
+	
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         result = [1 for i in range(len(nums))]
@@ -40,14 +38,12 @@ class Solution:
             prefix_right *= nums[i+1]
             result[i] = result[i]*prefix_right
 
-        return result
-```
+        return result 
 
 -----------------------------------------------------
 560. Subarray Sum Equals K
 https://leetcode.com/problems/subarray-sum-equals-k/
-
-```
+ 
 NOTE: TLE
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
@@ -75,13 +71,11 @@ class Solution:
             if curr - k in map_:
                 cnt += map_[curr-k]
             map_[curr] += 1
-        return cnt	
-```
+        return cnt	 
 
 
 ---------------------------------------------
-973. K Closest Points to Origin
-```
+973. K Closest Points to Origin 
 class Solution(object):
     def kClosest(self, points, K):
         points.sort(key = lambda P: P[0]**2 + P[1]**2)
@@ -102,5 +96,4 @@ class Solution(object):
         for i in range(K):
             rt.append(heappop(pt)[-1])
             
-        return rt
-```
+        return rt 
