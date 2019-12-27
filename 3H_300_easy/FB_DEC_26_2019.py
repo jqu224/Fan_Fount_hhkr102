@@ -26,4 +26,22 @@ class Solution:
                 heapq.heappop(min_heap)
                 heapq.heappush(min_heap, num)
         return min_heap[0]       
-      
+
+785. Is Graph Bipartite?
+https://leetcode.com/problems/is-graph-bipartite
+class Solution:
+    def isBipartite(self, graph: List[List[int]]) -> bool:
+        color = {}
+        for i, node in enumerate(graph):
+            if i not in color:
+                stack = [i]
+                color[i] = 0
+                while stack:
+                    j = stack.pop()
+                    for each in graph[j]:
+                        if each not in color:
+                            stack.append(each)
+                            color[each] = 1 ^ color[j] 
+                        elif color[each] == color[j]:
+                            return False 
+        return True
