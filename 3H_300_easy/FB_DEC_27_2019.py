@@ -38,6 +38,24 @@ class Solution:
 
 139. Word Break
 https://leetcode.com/problems/word-break
+
+! ~~~~~~~~~ !
+Memory LIMIT EXCEDDED
+! ~~~~~~~~~ !
+class Solution:
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        stack = [s]
+        while stack:
+            temp = []
+            for each in stack:
+                for word in wordDict:
+                    if each[:len(word)] == word:
+                        if each == word:
+                            return True
+                        else:
+                            temp.append(each[len(word):])
+            stack = copy.copy(temp)
+        return False
 class Solution:
 	def wordBreak(self, s: str, wordDict: List[str]) -> bool:
 		dp = [True] + [False] * len(s)
