@@ -35,3 +35,22 @@ class Solution:
                 ans[stk.pop()] += (ts - start + 1)
                 start = ts + 1
         return ans
+
+139. Word Break
+https://leetcode.com/problems/word-break
+class Solution:
+	def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+		dp = [True] + [False] * len(s)
+        
+        for i in range(len(s) + 1):
+			# if dp[i] is False we cannot start a new word at i
+            if not dp[i]: 
+				continue
+            # check all words - we can repeatedly use them!
+            for w in wordDict:
+                # check if candidate word fits in remaining seq
+                if len(w) <= len(s[i:]):
+                    if w == s[i:i + len(w)]:
+                        # set dp to True where next word search starts
+                        dp[i + len(w)] = True
+        return dp[-1]
