@@ -105,3 +105,17 @@ class LRUCache(OrderedDict):
         self[key] = value
         if len(self) > self.capacity:
             self.popitem(last = False)
+OrderedDict.popitem() -> pop the last used item
+OrderedDict.popitem(False) -> pop the least used item
+OrderedDict.popitem(last=False) -> pop the least used item
+
+
+OrderedDict.move_to_end(key_name) -> move the key: value pair to the end of the OrderedDict
+	
+>>> a = a.fromkeys("1234")
+>>> a
+OrderedDict([('1', None), ('2', None), ('3', None), ('4', None)])
+>>> a.move_to_end("2")
+>>> a
+OrderedDict([('1', None), ('3', None), ('4', None), ('2', None)])
+
