@@ -23,3 +23,30 @@ else
       return (t - n) // (l-i)
       
 1302. Deepest Leaves Sum
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    def deepestLeavesSum(self, root: TreeNode) -> int:
+        head = root
+        stack = [(root, 0)]
+        while stack:
+            
+            temp = []
+            for s, lvl in stack: 
+                if s.left:
+                    temp.append((s.left, lvl+1))
+                if s.right:
+                    temp.append((s.right, lvl+1))
+            if temp:
+                stack = temp
+            else:
+                break
+        ret = 0
+        for s, lvl in stack:
+            ret += s.val
+        return ret
