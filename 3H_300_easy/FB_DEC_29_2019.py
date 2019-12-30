@@ -22,3 +22,4 @@ else
     else:
       return (t - n) // (l-i)
       
+1302. Deepest Leaves Sum
