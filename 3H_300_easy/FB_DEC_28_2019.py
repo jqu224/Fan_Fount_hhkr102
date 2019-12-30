@@ -46,5 +46,30 @@ class Solution:
                 break 
                 
         return ret + two
+    
+1306. Jump Game III 
+class Solution:
+    def canReach(self, arr: List[int], start: int) -> bool:
+        def valid(pos):
+            if 0 > pos or pos >= l:
+                return False
+            if memo[pos] == False:
+                memo[pos] = True
+                return True
+            else:
+                return False
+        memo = [False]*len(arr)
+        l = len(arr)
+        stack = [start]
+        while stack:
+            temp = []
+            for pos in stack:
+                if arr[pos] == 0:
+                    return True
+                if valid(pos+arr[pos]): 
+                    temp.append(pos+arr[pos]) 
+                if valid(pos-arr[pos]): 
+                    temp.append(pos-arr[pos])  
+            stack = temp
             
-        
+        return False
