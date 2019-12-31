@@ -25,3 +25,33 @@ class Solution:
         return ret
         
         
+986. Interval List Intersections
+class Solution:
+    def intervalIntersection(self, A: List[List[int]], B: List[List[int]]) -> List[List[int]]:
+        ret = []
+        while A and B:
+            if A:
+                a_0, a_1 = A[0]
+            if B:
+                b_0, b_1 = B[0]
+
+            if a_0 <= b_0 <= b_1 <= a_1:
+                ret.append([b_0, b_1])
+            elif b_0 <= a_0 <= b_1 <= a_1:
+                ret.append([a_0, b_1])
+            elif b_0 <= a_0 <= a_1 <= b_1:
+                ret.append([a_0, a_1]) 
+            elif a_0 <= b_0 <= a_1 <= b_1:
+                ret.append([b_0, a_1])
+            elif a_0 <= a_1 <= b_0 <= b_1:
+                pass
+            elif b_0 <= b_1 <= a_0 <= a_1:
+                pass
+
+            if a_1 < b_1:
+                A.pop(0)
+            else:
+                B.pop(0)
+        return ret
+            
+            
