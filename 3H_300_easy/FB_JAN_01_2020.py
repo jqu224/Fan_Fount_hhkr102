@@ -30,8 +30,10 @@ if lower:
   if nums[mid] == t and nums[mid11] < t:
 
 
-////////   ////////    ////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 71. Simplify Path
+# Given an absolute path for a file
+
 class Solution:
     def simplifyPath(self, p: str) -> str:
         p = p.split("/")
