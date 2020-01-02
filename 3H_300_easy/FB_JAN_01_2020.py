@@ -29,6 +29,8 @@ if upper:
 if lower:
   if nums[mid] == t and nums[mid11] < t:
 
+
+////////   ////////    ////////
 71. Simplify Path
 class Solution:
     def simplifyPath(self, p: str) -> str:
