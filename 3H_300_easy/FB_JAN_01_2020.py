@@ -48,3 +48,31 @@ class Solution:
                 ret.append(i)
         return "/" + "/".join(ret)
                 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+721. Accounts Merge
+class Solution(object):
+    def accountsMerge(self, accounts):
+        em_to_name = {}
+        graph = collections.defaultdict(set)
+        for name, *acc in accounts: 
+            for email in acc:
+                graph[acc[0]].add(email)
+                graph[email].add(acc[0])
+                em_to_name[email] = name
+
+        seen = set()
+        ans = []
+        for email in graph:
+            if email not in seen:
+                seen.add(email)
+                stack = [email]
+                component = []
+                while stack:
+                    node = stack.pop()
+                    component.append(node)
+                    for nei in graph[node]:
+                        if nei not in seen:
+                            seen.add(nei)
+                            stack.append(nei)
+                ans.append([em_to_name[email]] + sorted(component))
+        return ans
