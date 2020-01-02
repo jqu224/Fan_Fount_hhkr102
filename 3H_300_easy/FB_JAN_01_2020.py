@@ -28,3 +28,19 @@ if upper:
   if nums[mid] == t and nums[mid+1] > t:
 if lower:
   if nums[mid] == t and nums[mid11] < t:
+
+71. Simplify Path
+class Solution:
+    def simplifyPath(self, p: str) -> str:
+        p = p.split("/")
+        ret = []
+        for i in p: 
+            if not i or i == ".":
+                continue
+            if i == "..":
+                if ret:
+                    ret.pop()
+            else:
+                ret.append(i)
+        return "/" + "/".join(ret)
+                
