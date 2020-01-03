@@ -33,5 +33,21 @@ class Solution:
 1249. Minimum Remove to Make Valid Parentheses
 https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/
 
-
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
+        ret = []
+        string = list(s)
+        for i, cha in enumerate(string):
+            if cha == "(":
+                ret.append((i, "("))
+            elif cha == ")" and ret and ret[-1][1] == "(":
+                ret.pop() 
+            elif cha == ")":
+                ret.append((i, ")")) 
+        for i, cha in ret[::-1]:
+            string.pop(i)
+        return "".join(string)
+            
+                
+                
             
