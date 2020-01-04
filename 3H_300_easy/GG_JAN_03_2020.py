@@ -78,4 +78,68 @@ class Solution:
       return -1;
   }              
 
-             
+
+981. Time Based Key-Value Store
+https://leetcode.com/problems/time-based-key-value-store/
+
+class TimeMap:
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.i = collections.defaultdict(lambda: [0])
+        
+            
+    def set(self, key: str, value: str, timestamp: int) -> None: 
+        self.i[key][0] += 1
+        self.i[key].append([timestamp, value])
+
+    def get(self, key: str, timestamp: int) -> str:
+        r = self.i[key][0]
+        l = 0
+        
+        while l < r:
+            mid = l + (r-l)//2 + 1
+            
+            t, v = self.i[key][mid]
+            if t == timestamp:
+                return v
+            if t < timestamp:
+                l = mid
+            if t > timestamp:
+                r = mid - 1
+                
+        if l == 0:
+            return ""
+        
+        return self.i[key][l][1]
+        
+import bisect
+from collections import defaultdict
+
+
+class TimeMap:
+
+    def __init__(self):
+        """
+        Initialize your data structure here.
+        """
+        self.times = defaultdict(list)
+        self.values = defaultdict(list)
+
+    # ex: key = 'foo', value = 'bar', timestamp = 1
+    def set(self, key: str, value: str, timestamp: int) -> None:
+        self.times[key].append(timestamp)
+        self.values[key].append(value)
+
+    def get(self, key: str, timestamp: int) -> str:
+        i = bisect.bisect_right(self.times[key], timestamp)
+        if i:
+            return self.values[key][i - 1]
+        return ''
+
+# Your TimeMap object will be instantiated and called as such:
+# obj = TimeMap()
+# obj.set(key,value,timestamp)
+# param_2 = obj.get(key,timestamp)
