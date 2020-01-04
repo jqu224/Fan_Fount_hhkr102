@@ -49,5 +49,36 @@ class Solution:
         return "".join(string)
             
                 
-                
+143. Reorder List
+https://leetcode.com/problems/reorder-list/
+class Solution:
+    def reorderList(self, head: ListNode) -> None:
+        """
+        Do not return anything, modify head in-place instead.
+        """
+
+        if not head:
+            return None
+        fast = slow = head
+
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+        head1, head2 = head, slow.next
+        slow.next = None
+
+        cur, pre = head2, None
+        while cur:
+            temp = cur
+            cur = cur.next 
+            temp.next = pre
+            pre = temp
+
+
+        cur1, cur2 = head1, pre
+        while cur2:
+            nex1, nex2= cur1.next, cur2.next
+            cur1.next = cur2
+            cur2.next = nex1
+            cur1 , cur2 = nex1, nex2
             
