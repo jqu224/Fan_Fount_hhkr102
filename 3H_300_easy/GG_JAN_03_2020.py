@@ -143,3 +143,40 @@ class TimeMap:
 # obj = TimeMap()
 # obj.set(key,value,timestamp)
 # param_2 = obj.get(key,timestamp)
+
+
+from collections import Counter
+class Solution:
+    def longestStrChain(self, words: List[str]) -> int:
+        n = len(words)
+        if n == 1:
+            return 1
+
+        maxLen = 1
+        sortedWs = sorted(words, key=lambda w: len(w))
+        wMap = {}
+        for i in range(n):
+            wMap[sortedWs[i]] = i
+        minWL = len(sortedWs[0])
+        memo = [1] * n
+        for i in range(n):
+            w = sortedWs[i]
+            l = len(w)
+            if l == minWL:
+                continue
+
+            maxChainL = 0
+            # Max chain lens from its predecessors
+            for j in range(l):
+                predW = w[:j] + w[j + 1:]
+                if predW not in wMap:
+                    continue
+
+                maxChainL = max(maxChainL, memo[wMap[predW]])
+                if maxChainL == l - minWL:
+                    break
+
+            memo[i] = maxChainL + 1
+            maxLen = max(maxLen, memo[i])
+
+        return maxLen
