@@ -24,3 +24,35 @@ class Solution:
             curr = ord("a") + int(r) - 1
             res.append(chr(curr)) 
         return "".join(res)
+    
+    
+class Solution:
+    def watchedVideosByFriends(self, w: List[List[str]], f: List[List[int]], i: int, l: int) -> List[str]:
+        if not f:
+            return []
+        memo = set([i, *f[i]])
+        stack = f[i] 
+        while l - 1 > 0:
+            l -= 1
+            temp = []
+            for s in stack: 
+                for ss in f[s]:
+                    if ss not in memo:
+                        memo.add(ss)
+                        temp.append(ss) 
+            stack = temp 
+        ret = []
+        stack = set(stack) 
+        for s in stack: 
+            ret.extend(w[s])
+        ret = collections.Counter(ret)
+        rrr = collections.defaultdict(list)
+        for k, v in ret.items():
+            rrr[v].append(k)
+        res = []
+        for k in sorted(rrr): 
+            print(sorted(rrr[k]))
+            res.extend(sorted(rrr[k]))
+        return res
+            
+        
