@@ -33,3 +33,15 @@ class Solution:
                 stack.append(curr.child)
                 curr.child = None
         return head
+
+class Solution:
+    cnt = 0
+    def countNodes(self, root: TreeNode) -> int: 
+        def dfs(node):
+            if not node:
+                return 
+            self.cnt += 1
+            dfs(node.left)  
+            dfs(node.right)    
+        dfs(root)
+        return self.cnt 
