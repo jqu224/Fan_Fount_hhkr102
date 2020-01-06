@@ -33,7 +33,8 @@ class Solution:
                 stack.append(curr.child)
                 curr.child = None
         return head
-
+    
+222. Count Complete Tree Nodes
 class Solution:
     cnt = 0
     def countNodes(self, root: TreeNode) -> int: 
@@ -45,3 +46,20 @@ class Solution:
             dfs(node.right)    
         dfs(root)
         return self.cnt 
+
+class Solution:
+    def countNodes(self, root):
+        if not root:
+            return 0
+        h1, h2 = self.height(root.left), self.height(root.right) 
+        if h1 > h2: # right child is full 
+            return self.countNodes(root.left) +  2 ** h2
+        else: # left child is full 
+            return 2 ** h1 + self.countNodes(root.right)
+
+
+    def height(self, root):
+        if not root:
+            return 0
+        return self.height(root.left) + 1
+    
