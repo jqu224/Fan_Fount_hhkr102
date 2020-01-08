@@ -2,6 +2,8 @@
 947. Most Stones Removed with Same Row or Column
 https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
 DFS union find
+in the best case scenario, only one will be left for a connectted graph 
+
 class Solution:
     def removeStones(self, stones: List[List[int]]) -> int:
         visited, num_left, on_row, on_col = set(), 0, collections.defaultdict(list), collections.defaultdict(list)
