@@ -54,4 +54,30 @@ class Solution:
         return bisect.bisect_left(self._accum_weights, random.random())
 
             
-        
+class Solution: 
+    def __init__(self, w: List[int]): 
+        self.summ = 0
+        self.listt = []
+        for i in w:
+            self.listt.append(self.summ+i)
+            self.summ += i
+             
+    def pickIndex(self) -> int:
+        pick = random.randint(0, self.summ)
+        l, r = 0, len(self.listt) - 1
+        while l + 1 < r:
+            mid = l + (r - l)//2 
+            if pick < self.listt[mid]:
+                r = mid 
+            elif pick > self.listt[mid]:
+                l = mid 
+            else:
+                r = mid
+                break
+        return l if self.listt[l] > pick else r
+  
+
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(w)
+# param_1 = obj.pickIndex()
