@@ -33,3 +33,25 @@ class Solution:
         return max_**2
                     
         
+528
+class Solution:
+
+    def __init__(self, w: List[int]):
+        self.w = list(itertools.accumulate(w))
+        
+    def pickIndex(self) -> int:
+        x = random.choices(range(len(self.w)), cum_weights=self.w)
+        return x[0]
+            
+                           
+class Solution:
+
+    def __init__(self, w: List[int]):
+        total = sum(w)
+        self._accum_weights = list(itertools.accumulate(weight / total for weight in w))    
+
+    def pickIndex(self) -> int:
+        return bisect.bisect_left(self._accum_weights, random.random())
+
+            
+        
