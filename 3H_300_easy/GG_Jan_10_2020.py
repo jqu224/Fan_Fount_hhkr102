@@ -24,7 +24,9 @@ class Solution(object):
                 if count[tree[i]] == 0: del count[tree[i]]
                 i += 1
         return j - i + 1
-
+    
+399. Evaluate Division
+https://leetcode.com/problems/evaluate-division/
 class Solution:
     def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
         dc = collections.defaultdict(dict)
@@ -54,4 +56,45 @@ class Solution:
             else:
                 ret.append(-1)
         return ret
-                
+         
+393. UTF-8 Validation
+https://leetcode.com/problems/utf-8-validation/
+class Solution:
+    def validUtf8(self, data: List[int]) -> bool:
+        prev = None
+        for i in data:
+            curr = bin(i)[2:].rjust(8, "0")
+            if prev == None:
+                prev = len(curr) - len(curr.lstrip("1")) - 1
+                if prev == -1:
+                    prev = None
+                elif prev == 0 or prev > 3:
+                    return False 
+            else:
+                if len(curr) - len(curr.lstrip("1")) == 1:
+                    prev -= 1
+                else:
+                    return False
+                if prev == 0:
+                    prev = None 
+            print(prev, bin(i))
+        
+        return True if not prev else False
+                 
+388. Longest Absolute File Path
+https://leetcode.com/problems/longest-absolute-file-path/
+class Solution:
+    def lengthLongestPath(self, input: str) -> int:
+        paths = input.split('\n')
+        
+        maxLength = 0
+        dict = {-1:0}
+        for line in paths:
+            
+            depth = line.count('\t')
+            dict[depth] = len(line) - depth + dict[depth - 1]
+            
+                         
+            if '.' in line:
+                maxLength = max(maxLength, dict[depth] + depth)
+        return maxLength
