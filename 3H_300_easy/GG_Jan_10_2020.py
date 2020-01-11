@@ -24,3 +24,34 @@ class Solution(object):
                 if count[tree[i]] == 0: del count[tree[i]]
                 i += 1
         return j - i + 1
+
+class Solution:
+    def calcEquation(self, equations: List[List[str]], values: List[float], queries: List[List[str]]) -> List[float]:
+        dc = collections.defaultdict(dict)
+        for i, (a, b) in enumerate(equations):
+            dc[a][b] = values[i]
+            dc[b][a] = 1/values[i]
+        ret = []
+        for a, b in queries:
+            if a in dc and b in dc: 
+                stack = list(dc[a].items()) 
+                seen = {a}
+                found = 0
+                while stack:
+                    temp = []
+                    for s, v in stack:
+                        if s == b:
+                            ret.append(v)
+                            found, temp = 1, [] 
+                            break
+                        if s not in seen:
+                            seen.add(s)
+                            for k, nex_v in dc[s].items():
+                                temp.append((k, nex_v*v)) 
+                    stack = temp
+                if found != 1:
+                    ret.append(-1)
+            else:
+                ret.append(-1)
+        return ret
+                
