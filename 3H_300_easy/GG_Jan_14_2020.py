@@ -37,3 +37,25 @@ class Solution:
 
         _permutation([], nums)
         return perms
+
+394. Decode String
+class Solution: 
+    def decodeString(self, s: str) -> str:
+        stack = []
+        
+        for x in s:
+            if x != ']':
+                stack.append(x)
+            else:
+                t = []
+                while stack[-1] != '[':
+                    t.append(stack.pop())
+                stack.pop()
+                l = ''
+                while stack and stack[-1].isdigit():
+                    l = l+stack.pop()
+                l = int(l[::-1])
+                stack.append((''.join(t[::-1]))*int(l))
+                
+        return ''.join(stack)
+                
