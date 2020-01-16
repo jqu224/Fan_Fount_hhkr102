@@ -22,3 +22,23 @@ class Solution:
     def isValidBST(self, root: TreeNode) -> bool:
         
         return self.check(root)
+    
+    
+class Solution:
+    def summaryRanges(self, nums: List[int]) -> List[str]:
+        ret = []
+        prev = None
+        for i in nums: 
+            if ret:
+                if ret[-1][-1] == i - 1:
+                    if len(ret[-1]) == 1:
+                        ret[-1].append(i)
+                    else:
+                        ret[-1][1] = i
+                else:
+                    ret.append([i])  
+            else:
+                ret.append([i]) 
+            prev = i 
+        return ["->".join(list(map(str, r))) for r in ret]
+                
