@@ -70,3 +70,30 @@ class Solution:
         if z % math.gcd(x,y) == 0:
             return True
         return True
+    
+735. Asteroid Collision
+class Solution:
+    def asteroidCollision(self, asteroids: List[int]) -> List[int]:
+        a = asteroids.copy()
+        if not a:
+            return []
+        stack = [a[0]]
+        for i in range(1, len(a)):
+            if not stack:
+                stack.append(a[i]) 
+                
+            elif a[i] < 0 and stack[-1] > 0:
+                # collision                 
+                while stack:
+                    if abs(a[i]) > stack[-1]:
+                        stack.pop()
+                    else:
+                        if abs(a[i]) == stack[-1]:
+                            stack.pop() 
+                        break
+                    if not stack or stack[-1] < 0:
+                        stack.append(a[i]) 
+                        break
+            else:
+                stack.append(a[i])
+        return stack
