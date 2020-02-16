@@ -91,3 +91,66 @@ Student Name        Number  Sex  Subject     ID
 NOTE: mike and chemistry will be ignored since they dont have a match
   
   
+
+https://www.hackerrank.com/challenges/relational-algebra-3/problem
+🎼 --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  
+Which is a join condition contains an equality operator?
+What is Equi Join in SQL?
+SQL EQUI JOIN performs a JOIN against equality or matching column(s) values of the associated tables. An equal sign (=) is used as comparison operator in the where clause to refer equality.
+
+You may also perform EQUI JOIN by using JOIN keyword followed by ON keyword and then specifying names of the columns along with their associated tables to check equality.
+
+Syntax:
+
+SELECT column_list 
+FROM table1, table2....
+WHERE table1.column_name =
+table2.column_name; 
+or
+
+SELECT *
+FROM table1 
+JOIN table2
+[ON (join_condition)]
+     
+     
+https://www.hackerrank.com/challenges/relational-algebra-4/problem
+🎼 --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  
+In precedence of set operators the expression is evaluated from:
+
+Depends on the expression
+Left to right (Y)
+Right to left
+From user specification
+     
+https://www.hackerrank.com/challenges/relational-algebra-4/problem
+🎼 --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  
+In precedence of set operators the expression is evaluated from:
+
+Depends on the expression
+Left to right (Y)
+Right to left
+From user specification
+
+     
+     
+https://www.hackerrank.com/challenges/database-query-languages/problem
+🎼 --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  
+Using which language can a user request information from a database ?
+ 
+Query  (Y)
+Relational
+     
+     
+https://www.hackerrank.com/challenges/relations-1/problem🎼 --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  
+The_____ operation allows the combining of two relations by merging pairs of tuples,
+ one from each relation, into a single tuple.
+     Join (Y)
+     
+https://www.hackerrank.com/challenges/relations-2/problem
+🎼 --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  --  
+The result which operation contains all pairs of tuples from the two relations, 
+     regardless of whether their attribute values match.
+     
+     Cartesian product （Y）
+Structural
