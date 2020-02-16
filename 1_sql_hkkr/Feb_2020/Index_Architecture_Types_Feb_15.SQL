@@ -1,4 +1,6 @@
+https://www.hackerrank.com/challenges/indexes-1/problem
 How many index architecture type classifications are there in MS SQL Server?
+🏂 - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- 
 Different types of Indexes in MySQL
 Clustered indexes
 Besides finding data quickly, indexes can also be used to optimize 
@@ -45,3 +47,39 @@ but it does allow them to be looked up more efficiently.
 It is a more specialized form of indexing that allows full text search. 
 Think of it as (essentially) creating an “index” for each “word” in the specified column. 
 Up to 5.5 versions, this index is supported for MyISAM engine only but from 5.6 it supports both MyISAM and InnoDB engines.
+
+
+
+https://www.hackerrank.com/challenges/indexes-2/problem
+Which of the following statement is true about row locators in non-clustered indexes in MS SQL Server?
+🏂 - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- 
+If the table does not have a clustered index, 
+the row locator is the clustered index key for the row.
+
+If the table has a clustered index, or the index is on an indexed view, 
+the row locator is a pointer to the row.
+
+(Y) If the table has a clustered index, or the index is on an indexed view, 
+the row locator is the clustered index key for the row.
+
+
+
+https://www.hackerrank.com/challenges/indexes-3/problem
+Consider the following two designs to store the data using clustered indexes in MS SQL Server:
+🏂 - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- 
+In the first design, the fill factor is 20% and the total number of free rows per page are A.
+
+In the second design, the fill factor is 40% and the total number of free rows per page are B.
+
+Which the followings describes the relation between A and B:
+
+A ~80
+B ~ 60
+A = 1.33B
+
+
+https://www.hackerrank.com/challenges/indexes-4/problem
+The correct syntax for creating composite indexes in MS SQL Sever is:
+🏂 - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- - -- --- 
+CREATE INDEX index_name
+ON table_name(column1, column2);
