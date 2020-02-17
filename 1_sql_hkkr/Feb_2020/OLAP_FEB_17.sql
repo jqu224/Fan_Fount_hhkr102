@@ -176,3 +176,44 @@ SELECT
 这句 clause 意思就是 department 这个 variable 不是 null 就输出 department，
 若为 null 则输出 "all department" 这个 constant string
   GROUP BY CUBE (department, gender)
+  
+  
+  
+---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 
+https://www.hackerrank.com/challenges/the-total-view/problem
+Which of these provides a total view of the organization?
+
+Data Warehousing
+
+
+  
+---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 
+https://www.hackerrank.com/challenges/olap-names/problem
+Which of these are alternate names for an OLAP Cube? The options in the top row are a and b respecitvely 
+and those in the bottom row are c and d.
+
+Multidimensional Cube
+HyperCube
+
+An OLAP cube is a multi-dimensional array of data.[1] Online analytical processing (OLAP)[2] 
+is a computer-based technique of analyzing data to look for insights. 
+The term cube here refers to a multi-dimensional dataset, which is also sometimes called a hypercube 
+ if the number of dimensions is greater than 3.
+                                                 
+                                                                                    
+---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈    
+https://www.hackerrank.com/challenges/olap-cube-metadata/problem
+What is the source of the cube metadata for OLAP?
+                                                                                    
+Both star and snowflake schema(s)
+                                                                                    
+                                   
+---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈 ---- 📈                                                    
+https://www.hackerrank.com/challenges/olap-operations-1/problem                                                                  
+This OLAP operation involves computing all of the data relationships for one or more dimensions. 
+                                                                                    
+roll-up                                                                      
+                                                                                    
+                                                                                    
+
+
